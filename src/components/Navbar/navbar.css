@@ -1,0 +1,150 @@
+/* Navbar Styles */
+.navbar, .sidebar {
+    background-color: bisque;
+    width: 100%;
+    max-width: 100vw; /* Ensures the navbar does not exceed viewport width */
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem; /* Adjusted padding to reduce overall spacing */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.shopcart_image {
+    margin-left: 0; /* Removed extra margin */
+    max-height: 3rem; /* Adjusted to decrease logo size */
+}
+
+.navbar_items {
+    display: flex;
+    gap: 0.5rem; /* Reduced gap between items */
+    flex-wrap: wrap; /* Allows items to wrap within the container */
+}
+
+.navbar_items a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+    margin: 0 0.25rem; /* Reduced margin around links */
+}
+
+.navbar_items a:hover {
+    color: #555;
+}
+
+.search_bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 0.5rem; /* Reduced margin to balance spacing */
+}
+
+.search_bar input {
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+    width: 150px; /* Adjusted width */
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    margin-right: 0; /* Removed extra margin */
+    font-weight: bold;
+    font-size: 1.25rem; /* Increased font size */
+}
+
+@media (max-width: 921px) {
+    .navbar_items a {
+        font-size: 0.9rem;
+    }
+    .search_bar input {
+        width: 100px;
+    }
+    .cart {
+        font-size: 1.25rem; /* Maintained the larger font size */
+    }
+}
+
+@media (max-width: 778px) {
+    .navbar_items {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+    }
+    .navbar_items a {
+        font-size: 0.6rem;
+    }
+    .search_bar input {
+        width: 80px;
+    }
+    .cart {
+        font-size: 1.25rem; /* Maintained the larger font size */
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    background-color: bisque;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.active {
+    display: flex;
+    transform: translateX(0);
+}
+
+.close_btn {
+    align-self: flex-end;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.sidebar_items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 1rem;
+}
+
+.sidebar_items a:hover {
+    background-color: rgb(247, 223, 193);
+}
+
+.sidebar_items a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+@media(max-width:779px) {
+    .hideOnMoblie {
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        justify-content:space-between
+    }
+
+    .shopcart_image {
+        max-height: 2rem; /* Further reduced logo size for smaller screens */
+    }
+}
