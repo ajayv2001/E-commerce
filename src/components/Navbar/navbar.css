@@ -1,14 +1,17 @@
 /* Navbar Styles */
 .navbar, .sidebar {
-    background-color: bisque;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     max-width: 100vw; /* Ensures the navbar does not exceed viewport width */
     height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0.5rem; /* Adjusted padding to reduce overall spacing */
+    padding: 0 1.5rem; /* Adjusted padding to reduce overall spacing */
     box-sizing: border-box; /* Ensures padding is included in the width */
+}
+.logo-img{
+    cursor: pointer;
 }
 
 .shopcart_image {
@@ -49,6 +52,18 @@
     padding: 0.5rem;
     outline: none;
     width: 150px; /* Adjusted width */
+    height: 24px; 
+}
+.search_bar svg{
+    padding: 0.5rem;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    background-color: white;
+
+}
+.search_bar svg:hover{
+    background-color: #4235fb;
 }
 
 .cart {
@@ -146,5 +161,11 @@
 
     .shopcart_image {
         max-height: 2rem; /* Further reduced logo size for smaller screens */
+    }
+}
+
+@media(min-width:779px) {
+    .hideOnWeb {
+        display: none;
     }
 }

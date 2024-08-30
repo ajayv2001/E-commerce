@@ -1,0 +1,32 @@
+export  const List=[
+    {
+        id:1,
+        name:"Furniture",
+        image:"/src/assets/furniture.png"
+    },
+    {
+        id:2,
+        name:"Hand Bag",
+        image:"src/assets/handbag.png"
+    },
+    {
+        id:3,
+        name:"Books",
+        image:"src/assets/book.png"
+    },
+    {
+        id:4,
+        name:"Tech",
+        image:"src/assets/tech.png"
+    },
+    {
+        id:5,
+        name:"Sneakers",
+        image:"src/assets/sneakers.png"
+    },
+    {
+        id:6,
+        name:"Travel",
+        image:"src/assets/travel.png"
+    }
+]

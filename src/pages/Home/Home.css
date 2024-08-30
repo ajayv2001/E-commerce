@@ -1,0 +1,180 @@
+.home {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full viewport height */
+    overflow: hidden;
+}
+
+.home-img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+
+.home-title {
+    position: absolute;
+    top: 50%; /* Centers the text vertically */
+    left: 10%; /* Adjusted to move the text more to the left */
+    transform: translate(-20%, -50%); /* Adjusted for proper centering */
+    color: white;
+    font-size: 2rem; /* Adjust the size as needed */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow for better readability */
+    text-align: center;
+    padding: 0 1rem;
+    animation: fadeIn 2s ease-in-out; /* Add animation */
+    font-size:  3rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-title {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-title {
+        font-size: 2.4rem; /* Further adjust font size for very small screens */
+    }
+}
+
+@media(max-width:1274px){
+    .home-title{
+        top: 20%; /* Centers the text vertically */
+        left: 30%;
+
+    }
+    
+}
+
+
+/* card css */
+.card-container {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 150px; 
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  }
+  .card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increases shadow for depth effect */
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 0;
+    background-color: rgba(92, 89, 89, 0.6); /* Adjust background color if needed */
+    color: white;
+  }
+  .category{
+    margin-top: 3rem;
+    padding: 2rem;
+ 
+  }
+
+  .category-list{
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .card {
+      width: calc(50% - 20px); /* 2 cards per row */
+      margin-bottom: 20px;
+      margin-right: 10px;
+    }
+  }
+  
+  /* Additional styles if needed for very small screens */
+  @media (max-width: 400px) {
+    .card {
+      width: calc(100% - 20px); /* 1 card per row */
+    }
+  }
+
+
+
+  /* deals */
+  .deals {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 10px;
+    gap: 20px; /* Spacing between the cards */
+  }
+  
+  .deal-detials {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    min-width: 200px; /* Adjust width as needed */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+  }
+  
+  .deal-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .deal-title {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .deal-price {
+    font-size: 1em;
+    color: #666;
+    margin-top: 5px;
+  }
+  .addto-cart {
+    margin-top: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .best-deals{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
