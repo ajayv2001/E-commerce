@@ -11,6 +11,9 @@ const Navbar = () => {
   const handleNavigate =()=>{
     navigate('/cart')
   }
+  const handleNavigateToHome =()=>{
+    navigate('/')
+  }
 
   const showSidebar = () => {
     setSidebarVisible(true);
@@ -24,7 +27,7 @@ const Navbar = () => {
     <>
       <div className='navbar'>
         <div className='shopcart_image'>
-          <img className='logo-img' onClick={handleNavigate} src="\src\assets\63e86ab4c21faa7bc0bd90dd_Logo.svg" alt="Logo" />
+          <img className='logo-img' onClick={handleNavigateToHome} src="\src\assets\63e86ab4c21faa7bc0bd90dd_Logo.svg" alt="Logo" />
         </div>
         <div className='navbar_items'>
           <Link className='hideOnMoblie' to="/">Home</Link>

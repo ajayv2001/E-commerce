@@ -72,6 +72,7 @@
     margin-right: 0; /* Removed extra margin */
     font-weight: bold;
     font-size: 1.25rem; /* Increased font size */
+    cursor: pointer;
 }
 
 @media (max-width: 921px) {
@@ -115,7 +116,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding-top: 2rem;
-    background-color: bisque;
+    background-color: rgb(255, 255, 255);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
 }
@@ -139,7 +140,7 @@
 }
 
 .sidebar_items a:hover {
-    background-color: rgb(247, 223, 193);
+    color: rgb(252, 137, 248);
 }
 
 .sidebar_items a {
@@ -156,7 +157,9 @@
     }
     .navbar{
         display: flex;
-        justify-content:space-between
+        justify-content:space-between;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     .shopcart_image {
