@@ -10,6 +10,7 @@ const Products = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { addToCart } = useContext(CartContext);
+  const [sortOption, setSortOption] = useState("");
 
 
   useEffect(() => {
@@ -36,8 +37,24 @@ const Products = () => {
       setItems(allItems); 
     }
   };
-  console.log(items);
-  
+
+  const sortItems = (option) => {
+    let sortedItems = [...items];
+    if (option === "lowToHigh") {
+      sortedItems.sort((a, b) => a.price - b.price);
+    } else if (option === "highToLow") {
+      sortedItems.sort((a, b) => b.price - a.price);
+    }
+    setItems(sortedItems);
+  };
+
+  const handleSortChange = (e) => {
+    const option = e.target.value;
+    setSortOption(option);
+    sortItems(option); 
+  };
+
+  // console.log(items);
   // items.forEach(item => console.log(item.category.name));
   
 
@@ -46,14 +63,24 @@ const Products = () => {
       <h1>All Products</h1>
       <div className="product-page">
         <div className="sort-list">
-          <select name="" id="" onChange={(e)=>filterByCategory(e.target.value)} defaultValue=""
-          >
+
+
+          <label htmlFor="Categories">Categories</label>
+          <select name="" id="" onChange={(e)=>filterByCategory(e.target.value)} defaultValue="">
             <option value="">All Products</option>
             <option value="Clothes">Clothes</option>
             <option value="Electronics">Electronics</option>
             <option value="Shoes">Shoes</option>
             <option value="Change title">furniture</option>
             <option value="Miscellaneous">Other Accessories</option>
+          </select>
+
+
+          <label htmlFor="Sort by">Sort by</label>
+          <select name="" id=""  defaultValue="" onChange={handleSortChange}>
+            <option value="">Featured</option>
+            <option value="lowToHigh">Price:Low to High</option>
+            <option value="highToLow">Price:High to Low</option>
           </select>
 
         </div>
