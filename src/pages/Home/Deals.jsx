@@ -9,8 +9,8 @@ const Deals = () => {
             <div className='deal-detials' key={items.id}>
                 <img src={items.image} alt={items.name} className='deal-image' />
                 <h2 className='deal-title'>{items.name}</h2>
-                <p className='deal-price'>${items.price}</p>
-                <button className='addto-cart'>Add to cart</button>
+                <p className='deal-price'>Coming soon...</p>
+
             </div>
         ))}
     </div>

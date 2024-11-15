@@ -1,16 +1,16 @@
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
-
 import "./Products.css";
 import { CartContext } from '../../Context/Context';
+
 
 const Products = () => {
   const [allItems, setAllItems] = useState([]);
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { addToCart } = useContext(CartContext);
   const [sortOption, setSortOption] = useState("");
+  const{addToCart} =useContext(CartContext)
 
 
   useEffect(() => {
@@ -92,7 +92,7 @@ const Products = () => {
               <p className="item-price">${item.price}</p>
               <button
                 className='add-to-cart'
-                onClick={() => addToCart(item)}
+                onClick={()=>addToCart(item)}
               >
                 Add to cart
               </button>
